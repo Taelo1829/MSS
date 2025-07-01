@@ -1,13 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+.alert-message {
+  padding: 10px 15px;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  border: 1px solid transparent;
+}
+
+.alert-error-custom {
+  background-color: #8b0000;
+  color: #ffe6e6;
+  border-color: #a00000;
+}
+
+.alert-info-custom {
+  background-color: #004d66;
+  color: #e0f7fa;
+  border-color: #007acc;
+}
+
+.alert-success-custom {
+  background-color: #1f6b3e;
+  color: #e6ffed;
+  border-color: #2d8c4c;
+}
+
+.app-container {
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative; /* For sidebar positioning */
+  overflow: hidden; /* Prevent scrollbar from sidebar */
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card-body-custom {
+  padding: 25px;
+}
+
+.card-header-custom h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: #b3b3b3;
+  font-size: 0.875rem;
+}
+
+.connect-button {
+  width: 100%;
+  background-color: #007acc;
+  color: white;
+  font-weight: 600;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-card {
+  background-color: #252526;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  border: 1px solid #3c3c3c;
+  color: #cccccc;
+}
+
+.form-control-custom {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #3c3c3c;
+  border: 1px solid #555555;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control-custom:focus {
+  outline: none;
+  border-color: #007acc;
+  box-shadow: 0 0 0 2px rgba(0, 122, 204, 0.25);
+}
+
+.form-control-custom::placeholder {
+  color: #888888;
+  opacity: 1;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 1.5rem; /* Equivalent to mb-4 for password field */
+}
+
+.form-label-custom {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  color: #b3b3b3; /* text-light-emphasis equivalent for dark theme */
+}
+
+.not-yet-created-message {
+  padding: 10px 15px;
+  color: #ffcc00;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+  .form-card {
+    border-radius: 6px;
+  }
+  .card-header-custom {
+    padding: 10px 15px;
+  }
+  .card-body-custom {
+    padding: 20px;
+  }
+  .sidebar {
+    width: 200px; /* Smaller sidebar on mobile */
+    left: -200px;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+  .connected-header h1 {
+    font-size: 1.2rem; /* Smaller font on mobile */
+  }
+  .db-logo-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 0; /* No margin on mobile for centering */
+  }
+  .main-content-area {
+    padding: 15px;
+  }
+  .dropdown-container {
+    width: 100%; /* Ensure full width on mobile */
+    max-width: none; /* Remove max-width constraint on mobile */
+  }
+  .new-query-button {
+    padding: 6px 10px; /* Smaller button on mobile */
+    font-size: 0.8em;
+  }
+  .query-editor-textarea {
+    height: 100px; /* Smaller height for editor on mobile */
+  }
+  .execute-button,
+  .stop-button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+  .query-playground.fullscreen {
+    padding: 10px; /* Adjust padding for mobile fullscreen */
+  }
 }
